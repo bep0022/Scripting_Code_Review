@@ -22,11 +22,22 @@ As requested, my review below focuses on the code associated with Karimian et al
 
 ### Major Comments
 
+TeloBP/TeloNP:
+The python code is modularized and includes descriptive docstrings about the parameters. However, there is a lack of inclusion  of docstrings, sanity checks, and print statements written for aid in troubleshooting.
 
+TeloPeakCounter:
+The implementation of TeloPeakCounter is missing details. There is no clear suggestion to git clone the repository. The first statement in the usage section is "TeloPeakCounter reads in fast5 data, which can be extracted using SquigglePull." That is all that is said referring to SquigglePull, meaning the authors neglect to clarify that this is not one of their own functions. There is no citation or Github provided for the creators of SquigglePull. Additionally this statement refers to input being the raw Nanopore sequencing output file as specifically .fast5 because that is what SquigglePull is solely compatible with; however, Nanopore introduced the .pod5 raw data file format that replaced .fast5 files prior to the publication of this paper and repository. The python code for TeloPeakCounter is modularized, but lacks docstrings. Altogether, the lack of explanation in this repository makes for usage and troubleshooting to be quite difficult. 
 
 ### Minor Comments
 
--   
+TeloBP/TeloNP:
+-   There are a lot of packages and dependencies required. Setting up and providing a conda environment would make this more accessible to the user.
+-   There is a demo file with the input code and output in a Jupyter Notebook file; however, in addition to this to make the repository more reproducible I think it would be beneficial to add the starting file of this demo to the repository so that the user may following along themself. 
+-   The usage options are described in the README, however the order of the steps for usage is not clearly laid out.
+
+TeloPeakCounter:
+-   Again, there are a lot of packages and dependencies required. Setting up and providing a conda environment would make this more accessible to the user.
+-   This repository also includes a demo available as a Jupyter Notebook, but the README includes no mention of the demo. Detail the demo in the README.
 
 ### Citation
 
